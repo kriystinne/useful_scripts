@@ -12,7 +12,8 @@ ads_extra = [
 ]
 
 # list for the links to download
-rmpt_list = [ # list of "links" separated by , ]
+rmpt_list = [ # list of "links" separated by , 
+            ]
 
 
 def download_videos(path, video_list):

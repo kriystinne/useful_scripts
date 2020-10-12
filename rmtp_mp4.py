@@ -32,11 +32,11 @@ def download_videos(path, video_list):
 
     # loop through the list of links and download them, saving with the name of the file
     # use file/mp4 as per the documentation here https://www.videolan.org/streaming-features.html since ts doesn't work with quicktime
-    for fname in rmpt_list:
+    for fname in video_list:
         split = fname.split("/")[4]
         final_name = split.replace(".mp4", "",)
         print("Working on ", fname)
         Popen(["/Applications/VLC.app/Contents/MacOS/VLC", "-I", "rc", f"{fname}", "--sout", f"file/mp4:{final_name}.mp4"])
 
 if __name__ == "__main__":
-    download_videos("/Volumes/T7 Touch/NOROFF/Downloaded from Moodle/Year2/Algorithms and Data Structures/Videos/",rmpt_list)
+    download_videos("/Volumes/T7 Touch/NOROFF/Downloaded from Moodle/Year2/Algorithms and Data Structures/Assessments/",ads_extra)
